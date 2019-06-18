@@ -65,14 +65,14 @@ eventObject.target.style.border = "1px dashed black";
     console.log('nav working');
 });
 
-// const middleImg1 = document.querySelector('.img-content');
-// middleImg1.addEventListener('click', function(eventObject){
-// eventObject.target.style.border = "1px dashed black";
-//     eventObject.stopPropagation();
-//     console.log('img content working');
-// });
+const middleImg1 = document.getElementById('middleImg1');
+middleImg1.addEventListener('dblclick', function(eventObject){
+    console.log('img content working');
+    eventObject.target.style.border = "2px dashed black";
+    TweenMax.to("middleImg1", 1, {opacity: 0,});
+});
 
-// const middleImg2 = document.querySelector('.img-content');
+// const middleImg2 = document.getElementsByClassName('img-content');
 // middleImg2.addEventListener('click', function(eventObject){
 // eventObject.target.style.border = "1px dashed black";
 //     eventObject.stopPropagation();
