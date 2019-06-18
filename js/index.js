@@ -61,20 +61,27 @@ const nav = document.querySelector('.nav');
 nav.addEventListener('click', function(eventObject){
 eventObject.target.style.border = "1px dashed black";
     eventObject.stopPropagation();
-    event.preventDefault();
     console.log('nav working');
+    event.preventDefault();
 });
 
 const middleImg1 = document.getElementById('middleImg1');
 middleImg1.addEventListener('dblclick', function(eventObject){
     console.log('img content working');
     eventObject.target.style.border = "2px dashed black";
-    TweenMax.to("middleImg1", 1, {opacity: 0,});
+    TweenMax.to(".middleImg1", 1, {opacity: 0,});
 });
 
-// const middleImg2 = document.getElementsByClassName('img-content');
-// middleImg2.addEventListener('click', function(eventObject){
-// eventObject.target.style.border = "1px dashed black";
-//     eventObject.stopPropagation();
-//     console.log('img content working');
-// });
+const middleImg2 = document.getElementById('middleImg2');
+middleImg2.addEventListener('mouseover', function(eventObject){
+eventObject.target.style.border = "2px dashed black";
+    eventObject.stopPropagation();
+    console.log('img2 content working');
+});
+
+const bottomgImg = document.getElementById('bottomImg');
+bottomgImg.addEventListener('contextmenu', function(eventObject){
+eventObject.target.style.border = "2px dashed black";
+eventObject.stopPropagation();
+console.log('img3 content working');
+});
