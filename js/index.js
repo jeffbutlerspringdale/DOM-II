@@ -2,34 +2,79 @@
 
 var delayInMilliseconds = 100; //1 second
 
-const btn = document.getElementById('dest-btn1');
-btn.addEventListener('mouseenter', function(eventObject){
+const btn1 = document.getElementById('dest-btn1');
+const btn2 = document.getElementById('dest-btn2');
+const btn3 = document.getElementById('dest-btn3');
+
+btn1.addEventListener('mouseenter', function(eventObject){
   eventObject.currentTarget.style.backgroundColor = "red";
   eventObject.currentTarget.style.color = "white";
-  eventObject.stopPropagation();
   setTimeout(function() {
     alert('When you move your mouse to click Ok, ill vanish.');
   }, delayInMilliseconds);
-});
-
-
-
-btn.addEventListener('mouseenter', function(eventObject){
-  eventObject.currentTarget.style.backgroundColor = "red";
   eventObject.stopPropagation();
-});
 
-btn.addEventListener('mouseleave', function(eventObject){
+});
+btn1.addEventListener('mouseleave', function(eventObject){
    //  console.log(`Current Target: ${eventObject.currentTarget}`);
     //  eventObject.currentTarget.style.backgroundColor = "blue";
      eventObject.currentTarget.style.display = "none";
-     console.log(`working btn`);
+     console.log(`working btn1`);
      eventObject.stopPropagation();
    });
+
+btn2.addEventListener('mouseenter', function(eventObject){
+    eventObject.currentTarget.style.backgroundColor = "red";
+    eventObject.currentTarget.style.color = "white";
+    setTimeout(function() {
+      alert('When you move your mouse to click Ok, ill vanish.');
+    }, delayInMilliseconds);
+    eventObject.stopPropagation();
+  
+  });
+btn2.addEventListener('mouseleave', function(eventObject){
+     //  console.log(`Current Target: ${eventObject.currentTarget}`);
+      //  eventObject.currentTarget.style.backgroundColor = "blue";
+       eventObject.currentTarget.style.display = "none";
+       console.log(`working btn2`);
+       eventObject.stopPropagation();
+     });
+
+btn3.addEventListener('mouseenter', function(eventObject){
+        eventObject.currentTarget.style.backgroundColor = "red";
+        eventObject.currentTarget.style.color = "white";
+        setTimeout(function() {
+        alert('When you move your mouse to click Ok, ill vanish.');
+        }, delayInMilliseconds);
+        eventObject.stopPropagation();
+      
+});
+btn3.addEventListener('mouseleave', function(eventObject){
+         //  console.log(`Current Target: ${eventObject.currentTarget}`);
+          //  eventObject.currentTarget.style.backgroundColor = "blue";
+           eventObject.currentTarget.style.display = "none";
+           console.log(`working btn3`);
+           eventObject.stopPropagation();
+});
 
 const nav = document.querySelector('.nav');
 nav.addEventListener('click', function(eventObject){
 eventObject.target.style.border = "1px dashed black";
     eventObject.stopPropagation();
     event.preventDefault();
+    console.log('nav working');
 });
+
+// const middleImg1 = document.querySelector('.img-content');
+// middleImg1.addEventListener('click', function(eventObject){
+// eventObject.target.style.border = "1px dashed black";
+//     eventObject.stopPropagation();
+//     console.log('img content working');
+// });
+
+// const middleImg2 = document.querySelector('.img-content');
+// middleImg2.addEventListener('click', function(eventObject){
+// eventObject.target.style.border = "1px dashed black";
+//     eventObject.stopPropagation();
+//     console.log('img content working');
+// });
